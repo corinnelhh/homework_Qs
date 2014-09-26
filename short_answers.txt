@@ -38,8 +38,9 @@ cases include already sorted lists, or lists containing many repeated elements.
 A pointer--declared in C by using an asterix, e.g. int *x;--is
 a variable whose value is the memory location of another object. Pointers,
 like other variables in C, must have their types
-declared when they are initialized; the pointer type matches the type
-of the variable that the pointer points to.
+declared when they are initialized; the declared pointer type matches the type
+of the variable that the pointer points to (although the actual data type of the value
+of a pointer is always a hexadecimal representing an address in memory).
 
 *4. What is the difference between Stack and Heap memory?*
 
