@@ -5,9 +5,8 @@
 
 def factorial(x):
     y = 1
-    while x > 0:
-        y *= x
-        x -= 1
+    for i in range(1, (x + 1)):
+        y *= i
     return y
 
 if __name__ == '__main__':
