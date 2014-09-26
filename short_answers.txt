@@ -1,0 +1,66 @@
+*1. What does O(n) mean? O(n^2)?*
+
+O(n) and 0(n^2) are instances of what's known as 'Big-O' notation; they refer to
+the time complexity of a function. An algorithm with the time complexity
+of O(n) is one where the time needed to complete the function increases
+linearly according to the size of the input; for example, a function such
+`for each_element in my_list` might take 1 ms for a list 1 element long, 2 ms
+for a list 2 elements long, and 137 mx for a 137-element long list. An algorithm
+with O(n^2) time complexity would increase its run time according to the
+square of the size of the input: a function such as:
+
+```
+for each element in my_list`
+    do something
+    for each_element in my_list:
+        do something else
+```
+
+might require 1 ms for a 1-element list, 4 ms for a 2-element list, and
+18769 ms (or almost 19 seconds) for a 137-element list.
+
+*2. Describe the quick sort algorithm.*
+
+The quicksort algorithm uses recursive partitioning to sort an array. The
+algorithm works by (a) picking a 'pivot' point--there are several accepted
+methods for choosing the pivot including (i) choosing the array element
+with the middle index, (ii) choosing an element at random, or (iii) choosing
+the median of the first, last, and middle array elements--and then (b) shuffling
+the elements such that all elements less than the pivot are shuffled to
+its left while all elements greater than the pivot are shuffled right, then
+(c) recursively applying steps (a) and (b) to each of the partioned sections
+(and each of their partioned sections) until all elements have been sorted.
+In the worst case, the quicksort algorithm runs in O(n^2) time; poor performance
+cases include already sorted lists, or lists containing many repeated elements.
+
+*3. In C, what is a pointer?*
+
+A pointer--declared in C by using an asterix, i.e. <i> int *x; </i>--is
+a variable whose value is the memory location of another object. Pointers,
+like other variables in C, must have their types
+declared when they are initialized; the pointer type matches the type
+of the variable that the pointer points to.
+
+*4. What is the difference between Stack and Heap memory?*
+
+Essentially, they're two ways to store variables in a computer: one (stack
+memory) requires no oversight by the user, while the other (heap memory)
+requires the user to make decisions about how to allocate objects in memory.
+
+Stack memory stores variables for the run-time of a function; once a
+program terminates, variables/data stored in stack memory disappear from scope
+and can't be accessed by any other program. Stack memory is managed automatically
+by the computer, and there are OS-imposed limits to the amount of data that can be
+simultaneously stored in the stack.
+Heap memory, on the other hand, allows for global access to data/variables,
+and must be managed manually by the user. There are no limits (aside from
+hardware limitations) to the amount of data that can be stored in heap memory,
+and variables can be accessed after the termination of a function.
+
+*5. What is the purpose of a garbage collector?*
+
+A garbage collector is used to remove objects from memory once they are no
+longer in use. Garbage collection allows the removal of objects from memory
+to be handled automatically; however, many languages (such as Python) allow
+automatic garbage collection to be turned off if the programmer wishes to
+handle memory allocation manually.
