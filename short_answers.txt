@@ -46,7 +46,6 @@ of the variable that the pointer points to.
 Essentially, they're two ways to store variables in a computer: one (stack
 memory) requires no oversight by the user, while the other (heap memory)
 requires the user to make decisions about how to allocate objects in memory.
-
 Stack memory stores variables for the run-time of a function; once a
 program terminates, variables/data stored in stack memory disappear from scope
 and can't be accessed by any other program. Stack memory is managed automatically
