@@ -35,15 +35,16 @@ cases include already sorted lists, or lists containing many repeated elements.
 
 *3. In C, what is a pointer?*
 
-A pointer--declared in C by using an asterix, i.e. int *x;--is
+A pointer--declared in C by using an asterix, e.g. int *x;--is
 a variable whose value is the memory location of another object. Pointers,
 like other variables in C, must have their types
-declared when they are initialized; the pointer type matches the type
-of the variable that the pointer points to.
+declared when they are initialized; the declared pointer type matches the type
+of the variable that the pointer points to (although the actual data type of the value
+of a pointer is always a hexadecimal number representing an address in memory).
 
 *4. What is the difference between Stack and Heap memory?*
 
-Essentially, they're two ways to store variables in a computer: one (stack
+Essentially, these are two ways to store variables in a computer: one (stack
 memory) requires no oversight by the user, while the other (heap memory)
 requires the user to make decisions about how to allocate objects in memory.
 Stack memory stores variables for the run-time of a function; once a
